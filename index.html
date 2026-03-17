@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A journal and a study tool">
+        <meta name="author" content="John Said">
+        <title>study tool</title>
+        <style>
+            body { font-family: system-ui; background: linear-gradient(135deg, #0f0f1a, #1a1040); color: #eee; min-height: 100vh; margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px }
+            h1 { font-size: 22px; margin-bottom: 20px; text-align: center }
+            h2 { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: #888; margin: 0 0 10px }
+            .grid { display: grid; grid-template-columns: 420px; gap: 14px }
+            .card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; padding: 24px; height: 300px; box-sizing: border-box }
+            label { display: flex; align-items: center; gap: 9px; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,.06); cursor: pointer; font-size: 14px }
+            label:last-of-type { border: none }
+            label:has(input:checked) span { text-decoration: line-through; opacity: .35 }
+            input[type=checkbox], input[type=radio] { accent-color: #7c6ef5; width: 15px; height: 15px; flex-shrink: 0 }
+            input[type=range] { width: 100%; accent-color: #7c6ef5; margin-top: 6px }
+            textarea { width: 100%; height: 210px; padding: 8px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); border-radius: 8px; color: #eee; font-size: 13px; box-sizing: border-box; resize: none }
+            .tag { padding: 2px 10px; border-radius: 20px; font-size: 12px; background: rgba(124,110,245,.2); color: #a99ff8 }
+        </style>
+    </head>
+    <body>
+        <h1>study tool</h1>
+        <div class="grid">
+            <div class="card">
+                <h2>today's tasks</h2>
+                <label><input type="checkbox"><span>Review L.O-11 Physics</span></label>
+                <label><input type="checkbox"><span>Complete Arabic Project</span></label>
+                <label><input type="checkbox"><span>Read chapter 32 serway</span></label>
+                <label><input type="checkbox"><span>Practice URT</span></label>
+            </div>
+            <div class="card">
+                <h2>mood &amp; focus</h2>
+                <label style="border:none; padding:5px 0"><input type="radio" name="m"><span class="tag">focused</span></label>
+                <label style="border:none; padding:5px 0"><input type="radio" name="m"><span class="tag">tired</span></label>
+                <label style="border:none; padding:5px 0"><input type="radio" name="m"><span class="tag">motivated</span></label>
+                <h2 style="margin-top:10px">focus level</h2>
+                <input type="range" min="1" max="10" value="7">
+                <div style="display:flex; justify-content:space-between; font-size:11px; color:#555; margin-top:3px">
+                    <span>low</span>
+                    <span>high</span>
+                </div>
+            </div>
+            <div class="card">
+                <h2>quick note</h2>
+                <textarea placeholder="Ideas, reminders, what you learned…"></textarea>
+            </div>
+        </div>
+    </body>
+</html>
